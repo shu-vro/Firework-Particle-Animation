@@ -5,9 +5,7 @@ $(".fireWorks").fireworks({
     height: "100%",
 });
 
-let parallax = document.querySelector(".parallax");
-window.addEventListener("mousemove", (e) => {
-    let x = e.x / 20;
-    let y = e.y / 20;
-    parallax.style.transform = `translate(${x}px, ${y}px)`;
-});
+VanillaTilt.init(document.querySelectorAll('.parallax')), {
+    max: 25, 
+    speed: 400
+}
